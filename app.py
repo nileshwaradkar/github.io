@@ -2,18 +2,12 @@ from langchain_openai.chat_models.base import ChatOpenAI
 from langchain_ollama.chat_models import ChatOllama
 import streamlit as st
 
-#llm = ChatOllama(model="llama3.1")
-
-llm = ChatOpenAI(
-     model="gemini-1.5-flash",
-     base_url="https://generativelanguage.googleapis.com/v1beta/",
-     api_key="AIzaSyBDvIJBakJMwV037cnabC2n3dXdEBzFoj4"
- )
+llm = ChatOllama(model="llama3.1")
 
 st.title("Chatbot")
 
 if "model" not in st.session_state:
-    st.session_state.model = "gemini-1.5-flash"
+    st.session_state.model = "llama3.1"
     
 if "messages" not in st.session_state:
     st.session_state.messages = []
