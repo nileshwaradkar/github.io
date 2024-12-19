@@ -1,4 +1,3 @@
-from langchain_openai.chat_models.base import ChatOpenAI
 from langchain_ollama.chat_models import ChatOllama
 import streamlit as st
 
